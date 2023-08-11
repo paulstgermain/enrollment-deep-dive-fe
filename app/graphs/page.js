@@ -8,6 +8,7 @@ import BarGraph from "@/components/graphs/Bar/BarGraph"
 import LineGraph from "@/components/graphs/Line/LineGraph"
 import PieGraph from "@/components/graphs/Pie/PieGraph"
 import ScatterGraph from "@/components/graphs/Scatter/ScatterGraph"
+import DataGrid from "@/components/graphs/Table/Table"
 
 export default function Graphs() {
     const [tabNum, setTabNum] = useState(0)
@@ -30,6 +31,7 @@ export default function Graphs() {
                         <Tab value={1} label="Line Graph" />
                         <Tab value={2} label="Pie Graph" />
                         <Tab value={3} label="Scatter Graph" />
+                        <Tab value={4} label="Data Grid" />
                     </Tabs>
                 </Box>
             </div>
@@ -38,6 +40,7 @@ export default function Graphs() {
                 {tabNum === 1 && <LineGraph />}
                 {tabNum === 2 && <PieGraph />}
                 {tabNum === 3 && <ScatterGraph />}
+                {tabNum === 4 && <DataGrid />}
             </div>
             {/* <BarGraph />
             <LineGraph />
