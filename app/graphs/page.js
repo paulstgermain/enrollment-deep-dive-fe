@@ -42,10 +42,6 @@ export default function Graphs() {
                 {tabNum === 3 && <ScatterGraph />}
                 {tabNum === 4 && <DataGrid />}
             </div>
-            {/* <BarGraph />
-            <LineGraph />
-            <PieGraph />
-            <ScatterGraph /> */}
         </>
     )
 }

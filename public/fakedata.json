@@ -1,0 +1,320 @@
+[
+	{
+		"transcript": "Speaker 1: What's the duration of the bootcamp? \n Speaker 2: The bootcamp is 12 weeks long, full-time. We also have a part-time option that's 24 weeks. \n Speaker 1: Will I need to buy any additional materials or tools? \n Speaker 2: No, everything you need will be provided in the bootcamp, including cloud resources.",
+		"date_created": "2023-08-10T10:00:00Z",
+		"enrollment_coach": "Charlie Brown",
+		"fireflies_keywords": [
+			"duration",
+			"12 weeks",
+			"part-time",
+			"materials",
+			"cloud resources"
+		],
+		"fireflies_summary": "Discussion about bootcamp duration and materials required.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"How long is the bootcamp?",
+			"Do I need to buy additional tools?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: Do I need prior coding experience to join? \n Speaker 2: While prior experience is beneficial, it's not mandatory. We start from the basics. \n Speaker 1: Are there any prep courses? \n Speaker 2: Yes, we offer a 2-week prep course to get you up to speed.",
+		"date_created": "2023-08-01T11:30:00Z",
+		"enrollment_coach": "Ethan Williams",
+		"fireflies_keywords": [
+			"coding experience",
+			"basics",
+			"prep course",
+			"2-week"
+		],
+		"fireflies_summary": "Inquiries about prerequisites and preparation courses.",
+		"ec_checklist": {
+			"time_availability": false,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Is prior coding experience required?",
+			"Do you offer prep courses?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: How many students are there in each cohort? \n Speaker 2: We keep our cohorts small, around 20 students, to ensure quality instruction. \n Speaker 1: Do you provide mentorship or one-on-one sessions? \n Speaker 2: Absolutely, each student is assigned a mentor for personalized guidance.",
+		"date_created": "2023-08-08T15:20:00Z",
+		"enrollment_coach": "Fiona Davis",
+		"fireflies_keywords": [
+			"cohort size",
+			"20 students",
+			"mentorship",
+			"one-on-one sessions"
+		],
+		"fireflies_summary": "Questions about class size, mentorship, and personal guidance.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"How big are the cohorts?",
+			"Is personal mentorship provided?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: Is remote learning an option? \n Speaker 2: Yes, we have both on-site and remote learning options available. \n Speaker 1: How do online sessions compare to on-site in terms of quality? \n Speaker 2: Both modes of learning receive the same quality of instruction and resources.",
+		"date_created": "2023-08-12T14:45:00Z",
+		"enrollment_coach": "George Thompson",
+		"fireflies_keywords": [
+			"remote learning",
+			"on-site",
+			"online sessions",
+			"quality"
+		],
+		"fireflies_summary": "Discussion on remote versus on-site learning options and their quality.",
+		"ec_checklist": {
+			"time_availability": false,
+			"commitment_readiness": false,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Do you offer remote learning?",
+			"Is online instruction as good as on-site?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: What post-bootcamp support do you provide? \n Speaker 2: We have a dedicated career support team that assists with job placements and interview prep. \n Speaker 1: How long can I access the course materials after completion? \n Speaker 2: You have lifetime access to all the course materials post-completion.",
+		"date_created": "2023-08-07T16:10:00Z",
+		"enrollment_coach": "Helen Martinez",
+		"fireflies_keywords": [
+			"post-bootcamp support",
+			"career support",
+			"job placements",
+			"lifetime access"
+		],
+		"fireflies_summary": "Inquiries about post-bootcamp support, job placements, and course material access.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": false,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"What kind of post-bootcamp support is available?",
+			"How long can I access course materials after completion?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: Are there any financing options available? \n Speaker 2: Yes, we partner with several financial institutions to offer loan options and payment plans. \n Speaker 1: Can I defer payment until I get a job? \n Speaker 2: We have an income share agreement where you can defer payment until you're employed.",
+		"date_created": "2023-08-15T11:00:00Z",
+		"enrollment_coach": "Isabella Turner",
+		"fireflies_keywords": [
+			"financing options",
+			"loan",
+			"payment plans",
+			"income share agreement"
+		],
+		"fireflies_summary": "Discussion about financing options, loans, and income share agreements.",
+		"ec_checklist": {
+			"time_availability": false,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Do you offer financing options?",
+			"Can I defer payment until after job placement?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: I'm from a non-tech background. Will I be able to keep up? \n Speaker 2: Absolutely. Many of our successful students come from non-tech backgrounds. We ensure foundational topics are covered thoroughly. \n Speaker 1: Are there any resources for beginners? \n Speaker 2: Yes, we provide additional resources and tutorials for beginners.",
+		"date_created": "2023-08-13T12:45:00Z",
+		"enrollment_coach": "Jacob Roberts",
+		"fireflies_keywords": [
+			"non-tech background",
+			"foundational topics",
+			"resources",
+			"tutorials"
+		],
+		"fireflies_summary": "Inquiries about suitability for people from non-tech backgrounds and beginner resources.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Is the program suitable for someone with a non-tech background?",
+			"Do you provide beginner resources?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: How often are the cohorts started? \n Speaker 2: We start a new cohort every month. \n Speaker 1: Is there a screening process before admission? \n Speaker 2: Yes, there's a basic assessment and interview to ensure a good fit for both parties.",
+		"date_created": "2023-08-20T14:00:00Z",
+		"enrollment_coach": "Kylie Lopez",
+		"fireflies_keywords": [
+			"cohorts",
+			"every month",
+			"screening process",
+			"assessment"
+		],
+		"fireflies_summary": "Discussion about cohort frequency and the admission screening process.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": false,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"How often do you start new cohorts?",
+			"What's the admission process?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: What if I need to drop out midway? Is there a refund policy? \n Speaker 2: Yes, we have a pro-rated refund policy if you decide to leave before a certain point in the program. \n Speaker 1: Can I rejoin in a later cohort if I drop out? \n Speaker 2: Absolutely, you can rejoin in a later cohort with some conditions applied.",
+		"date_created": "2023-08-17T15:30:00Z",
+		"enrollment_coach": "Leo Mitchell",
+		"fireflies_keywords": [
+			"drop out",
+			"refund policy",
+			"rejoin",
+			"cohort"
+		],
+		"fireflies_summary": "Questions about refund policy and possibility of rejoining after dropping out.",
+		"ec_checklist": {
+			"time_availability": false,
+			"commitment_readiness": false,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Is there a refund if I drop out?",
+			"Can I join a future cohort if I leave midway?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: I'm an international student. Do you provide visa support? \n Speaker 2: We don't directly provide visa support, but we can connect you with agencies that do. \n Speaker 1: Are there separate batches for international students? \n Speaker 2: No, all our students, whether local or international, study in the same cohorts.",
+		"date_created": "2023-08-19T16:40:00Z",
+		"enrollment_coach": "Mia Clarke",
+		"fireflies_keywords": [
+			"international student",
+			"visa support",
+			"agencies",
+			"batches"
+		],
+		"fireflies_summary": "Inquiries about provisions for international students and visa support.",
+		"ec_checklist": {
+			"time_availability": false,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Do you provide visa support?",
+			"Are there separate batches for international students?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: Can I work part-time while attending the bootcamp? \n Speaker 2: Many of our students do work part-time, especially if they're in the part-time bootcamp option. However, the full-time bootcamp can be intense. \n Speaker 1: Are there evening classes? \n Speaker 2: Yes, we offer evening classes for our part-time students.",
+		"date_created": "2023-08-23T09:00:00Z",
+		"enrollment_coach": "Noah Wilson",
+		"fireflies_keywords": [
+			"part-time work",
+			"evening classes",
+			"intense",
+			"full-time bootcamp"
+		],
+		"fireflies_summary": "Discussion about managing part-time work alongside the bootcamp and availability of evening classes.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Is it feasible to work part-time during the bootcamp?",
+			"Are there evening classes available?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: How is the curriculum updated? Do you incorporate the latest tech trends? \n Speaker 2: Our curriculum is updated regularly, taking into account industry feedback and the latest tech trends. \n Speaker 1: Do you cover cloud technologies? \n Speaker 2: Absolutely, cloud technologies are a core part of our curriculum.",
+		"date_created": "2023-08-24T10:30:00Z",
+		"enrollment_coach": "Olivia Parker",
+		"fireflies_keywords": [
+			"curriculum",
+			"updated",
+			"tech trends",
+			"cloud technologies"
+		],
+		"fireflies_summary": "Queries about curriculum updates, latest tech trends, and cloud technologies.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"How often is the curriculum updated?",
+			"Is cloud tech included in the curriculum?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: What's the student to teacher ratio in the bootcamp? \n Speaker 2: We maintain a ratio of about 10 students to 1 teacher to ensure personalized attention. \n Speaker 1: Do you have TA's or assistants for additional help? \n Speaker 2: Yes, each cohort has teaching assistants to help with queries and challenges.",
+		"date_created": "2023-08-25T11:15:00Z",
+		"enrollment_coach": "Peter Smith",
+		"fireflies_keywords": [
+			"student to teacher ratio",
+			"10:1",
+			"teaching assistants",
+			"queries"
+		],
+		"fireflies_summary": "Discussion on student to teacher ratio and availability of teaching assistants.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": true,
+			"why_join": false
+		},
+		"questions_from_lead": [
+			"What's the student to teacher ratio?",
+			"Do you have teaching assistants?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: I've heard about your diversity scholarships. Can you tell me more? \n Speaker 2: Absolutely! We offer scholarships to promote diversity in tech. This includes gender, racial, and economic factors. The application process is outlined on our website. \n Speaker 1: What's the deadline for scholarship applications? \n Speaker 2: The deadline is 2 weeks before the start of each cohort.",
+		"date_created": "2023-08-26T14:00:00Z",
+		"enrollment_coach": "Quincy Adams",
+		"fireflies_keywords": [
+			"diversity scholarships",
+			"gender",
+			"racial",
+			"economic factors",
+			"deadline"
+		],
+		"fireflies_summary": "Questions about diversity scholarships, criteria, and application deadlines.",
+		"ec_checklist": {
+			"time_availability": false,
+			"commitment_readiness": true,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"Can you provide information on diversity scholarships?",
+			"When's the scholarship application deadline?"
+		]
+	},
+	{
+		"transcript": "Speaker 1: How is the job placement process managed? \n Speaker 2: We have a dedicated career services team that assists students with resume building, mock interviews, and networking opportunities. Our partnerships with tech companies facilitate job placements. \n Speaker 1: What's the average salary of your graduates? \n Speaker 2: The average starting salary of our graduates is around $70,000, though it can vary based on location and individual company offers.",
+		"date_created": "2023-08-27T15:45:00Z",
+		"enrollment_coach": "Riley Johnson",
+		"fireflies_keywords": [
+			"job placement",
+			"career services",
+			"resume building",
+			"average salary",
+			"$70,000"
+		],
+		"fireflies_summary": "Discussion on job placement services, career support, and average graduate salaries.",
+		"ec_checklist": {
+			"time_availability": true,
+			"commitment_readiness": false,
+			"why_join": true
+		},
+		"questions_from_lead": [
+			"How do you assist with job placements?",
+			"What is the average salary of bootcamp graduates?"
+		]
+	}
+]

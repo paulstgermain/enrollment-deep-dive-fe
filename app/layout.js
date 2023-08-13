@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import CssBaseline from '@mui/material/CssBaseline'
 import Navbar from '../components/layout/Navbar'
+import { DataProvider } from '@/context/dataContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,12 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
       <CssBaseline />
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-      </body>
+      <DataProvider>
+        <body className={inter.className}>
+          <Navbar />
+          {children}
+        </body>
+      </DataProvider>
     </html>
   )
 }
