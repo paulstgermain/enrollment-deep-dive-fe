@@ -35,7 +35,7 @@ const columns = [
     return (
         <div style={{ display: 'flex', justifyContent: 'center', margin: '50px' }}>
             {
-                data && <div style={{ height: 650, width: '90%' }}>
+                data && <div style={{ height: 631, width: '90%' }}>
                 <DataGrid
                     rows={data}
                     columns={columns}

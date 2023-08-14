@@ -19,7 +19,7 @@ export default function Graphs() {
 
     return (
         <>
-            <div>
+            <div style={{ marginLeft: '150px', marginTop: '15px', width: '625px' }}>
                 <Box>
                     <Tabs
                         value={tabNum}
