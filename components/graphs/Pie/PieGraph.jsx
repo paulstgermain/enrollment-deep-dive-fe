@@ -11,11 +11,11 @@ export default function PieGraph() {
       }];
 
     return (
-        <>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '50px' }}>
             <Plot
                 data={data}
-                layout={{ width: 320, height: 240, title: 'Pie Graph' }}
+                layout={{ width: 640, height: 480, title: 'Pie Graph' }}
             />
-        </>
+        </div>
     )
 }

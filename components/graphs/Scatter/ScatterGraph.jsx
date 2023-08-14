@@ -28,9 +28,11 @@ export default function ScatterGraph() {
       var data = [trace1, trace2, trace3];
 
     return (
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '50px' }}>
         <Plot
                 data={data}
-                layout={{ width: 320, height: 240, title: 'Scatter Graph' }}
+                layout={{ width: 640, height: 480, title: 'Scatter Graph' }}
             />
+      </div>
     )
 }

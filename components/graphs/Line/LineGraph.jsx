@@ -18,11 +18,11 @@ export default function LineGraph() {
       let data = [trace1, trace2];
 
     return (
-        <>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '50px' }}>
             <Plot
                 data={data}
-                layout={{ width: 320, height: 240, title: 'Line Graph' }}
+                layout={{ width: 640, height: 480, title: 'Line Graph' }}
             />
-        </>
+        </div>
     )
 }

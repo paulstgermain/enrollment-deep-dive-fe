@@ -54,15 +54,15 @@ const columns = [
   export default function DataTable() {
     const data = useData()
     return (
-        <>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '50px' }}>
             {
-                data && <div style={{ height: 400, width: '90%' }}>
+                data && <div style={{ height: 650, width: '90%' }}>
                 <DataGrid
                     rows={data}
                     columns={columns}
                     initialState={{
                         pagination: {
-                            paginationModel: { page: 0, pageSize: 5 },
+                            paginationModel: { page: 0, pageSize: 10 },
                         },
                     }}
                     pageSizeOptions={[5, 10]}
@@ -70,6 +70,6 @@ const columns = [
                 />
             </div>
             }
-        </>
+        </div>
     )
   }

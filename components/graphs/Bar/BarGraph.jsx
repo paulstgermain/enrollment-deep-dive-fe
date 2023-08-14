@@ -13,11 +13,11 @@ export default function BarGraph() {
       ];
 
     return (
-        <>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '50px' }}>
             <Plot
                 data={data}
-                layout={{ width: 320, height: 240, title: 'Bar Graph' }}
+                layout={{ width: 640, height: 480, title: 'Bar Graph' }}
             />
-        </>
+        </div>
     )
 }
