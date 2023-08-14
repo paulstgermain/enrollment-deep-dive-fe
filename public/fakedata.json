@@ -1,5 +1,6 @@
 [
 	{
+		"id": 1,
 		"transcript": "Speaker 1: What's the duration of the bootcamp? \n Speaker 2: The bootcamp is 12 weeks long, full-time. We also have a part-time option that's 24 weeks. \n Speaker 1: Will I need to buy any additional materials or tools? \n Speaker 2: No, everything you need will be provided in the bootcamp, including cloud resources.",
 		"date_created": "2023-08-10T10:00:00Z",
 		"enrollment_coach": "Charlie Brown",
@@ -22,6 +23,7 @@
 		]
 	},
 	{
+		"id": 2,
 		"transcript": "Speaker 1: Do I need prior coding experience to join? \n Speaker 2: While prior experience is beneficial, it's not mandatory. We start from the basics. \n Speaker 1: Are there any prep courses? \n Speaker 2: Yes, we offer a 2-week prep course to get you up to speed.",
 		"date_created": "2023-08-01T11:30:00Z",
 		"enrollment_coach": "Ethan Williams",
@@ -43,6 +45,7 @@
 		]
 	},
 	{
+		"id": 3,
 		"transcript": "Speaker 1: How many students are there in each cohort? \n Speaker 2: We keep our cohorts small, around 20 students, to ensure quality instruction. \n Speaker 1: Do you provide mentorship or one-on-one sessions? \n Speaker 2: Absolutely, each student is assigned a mentor for personalized guidance.",
 		"date_created": "2023-08-08T15:20:00Z",
 		"enrollment_coach": "Fiona Davis",
@@ -64,6 +67,7 @@
 		]
 	},
 	{
+		"id": 4,
 		"transcript": "Speaker 1: Is remote learning an option? \n Speaker 2: Yes, we have both on-site and remote learning options available. \n Speaker 1: How do online sessions compare to on-site in terms of quality? \n Speaker 2: Both modes of learning receive the same quality of instruction and resources.",
 		"date_created": "2023-08-12T14:45:00Z",
 		"enrollment_coach": "George Thompson",
@@ -85,6 +89,7 @@
 		]
 	},
 	{
+		"id": 5,
 		"transcript": "Speaker 1: What post-bootcamp support do you provide? \n Speaker 2: We have a dedicated career support team that assists with job placements and interview prep. \n Speaker 1: How long can I access the course materials after completion? \n Speaker 2: You have lifetime access to all the course materials post-completion.",
 		"date_created": "2023-08-07T16:10:00Z",
 		"enrollment_coach": "Helen Martinez",
@@ -106,6 +111,7 @@
 		]
 	},
 	{
+		"id": 6,
 		"transcript": "Speaker 1: Are there any financing options available? \n Speaker 2: Yes, we partner with several financial institutions to offer loan options and payment plans. \n Speaker 1: Can I defer payment until I get a job? \n Speaker 2: We have an income share agreement where you can defer payment until you're employed.",
 		"date_created": "2023-08-15T11:00:00Z",
 		"enrollment_coach": "Isabella Turner",
@@ -127,6 +133,7 @@
 		]
 	},
 	{
+		"id": 7,
 		"transcript": "Speaker 1: I'm from a non-tech background. Will I be able to keep up? \n Speaker 2: Absolutely. Many of our successful students come from non-tech backgrounds. We ensure foundational topics are covered thoroughly. \n Speaker 1: Are there any resources for beginners? \n Speaker 2: Yes, we provide additional resources and tutorials for beginners.",
 		"date_created": "2023-08-13T12:45:00Z",
 		"enrollment_coach": "Jacob Roberts",
@@ -148,6 +155,7 @@
 		]
 	},
 	{
+		"id": 8,
 		"transcript": "Speaker 1: How often are the cohorts started? \n Speaker 2: We start a new cohort every month. \n Speaker 1: Is there a screening process before admission? \n Speaker 2: Yes, there's a basic assessment and interview to ensure a good fit for both parties.",
 		"date_created": "2023-08-20T14:00:00Z",
 		"enrollment_coach": "Kylie Lopez",
@@ -169,6 +177,7 @@
 		]
 	},
 	{
+		"id": 9,
 		"transcript": "Speaker 1: What if I need to drop out midway? Is there a refund policy? \n Speaker 2: Yes, we have a pro-rated refund policy if you decide to leave before a certain point in the program. \n Speaker 1: Can I rejoin in a later cohort if I drop out? \n Speaker 2: Absolutely, you can rejoin in a later cohort with some conditions applied.",
 		"date_created": "2023-08-17T15:30:00Z",
 		"enrollment_coach": "Leo Mitchell",
@@ -190,6 +199,7 @@
 		]
 	},
 	{
+		"id": 10,
 		"transcript": "Speaker 1: I'm an international student. Do you provide visa support? \n Speaker 2: We don't directly provide visa support, but we can connect you with agencies that do. \n Speaker 1: Are there separate batches for international students? \n Speaker 2: No, all our students, whether local or international, study in the same cohorts.",
 		"date_created": "2023-08-19T16:40:00Z",
 		"enrollment_coach": "Mia Clarke",
@@ -211,6 +221,7 @@
 		]
 	},
 	{
+		"id": 11,
 		"transcript": "Speaker 1: Can I work part-time while attending the bootcamp? \n Speaker 2: Many of our students do work part-time, especially if they're in the part-time bootcamp option. However, the full-time bootcamp can be intense. \n Speaker 1: Are there evening classes? \n Speaker 2: Yes, we offer evening classes for our part-time students.",
 		"date_created": "2023-08-23T09:00:00Z",
 		"enrollment_coach": "Noah Wilson",
@@ -232,6 +243,7 @@
 		]
 	},
 	{
+		"id": 12,
 		"transcript": "Speaker 1: How is the curriculum updated? Do you incorporate the latest tech trends? \n Speaker 2: Our curriculum is updated regularly, taking into account industry feedback and the latest tech trends. \n Speaker 1: Do you cover cloud technologies? \n Speaker 2: Absolutely, cloud technologies are a core part of our curriculum.",
 		"date_created": "2023-08-24T10:30:00Z",
 		"enrollment_coach": "Olivia Parker",
@@ -253,6 +265,7 @@
 		]
 	},
 	{
+		"id": 13,
 		"transcript": "Speaker 1: What's the student to teacher ratio in the bootcamp? \n Speaker 2: We maintain a ratio of about 10 students to 1 teacher to ensure personalized attention. \n Speaker 1: Do you have TA's or assistants for additional help? \n Speaker 2: Yes, each cohort has teaching assistants to help with queries and challenges.",
 		"date_created": "2023-08-25T11:15:00Z",
 		"enrollment_coach": "Peter Smith",
@@ -274,6 +287,7 @@
 		]
 	},
 	{
+		"id": 14,
 		"transcript": "Speaker 1: I've heard about your diversity scholarships. Can you tell me more? \n Speaker 2: Absolutely! We offer scholarships to promote diversity in tech. This includes gender, racial, and economic factors. The application process is outlined on our website. \n Speaker 1: What's the deadline for scholarship applications? \n Speaker 2: The deadline is 2 weeks before the start of each cohort.",
 		"date_created": "2023-08-26T14:00:00Z",
 		"enrollment_coach": "Quincy Adams",
@@ -296,6 +310,7 @@
 		]
 	},
 	{
+		"id": 15,
 		"transcript": "Speaker 1: How is the job placement process managed? \n Speaker 2: We have a dedicated career services team that assists students with resume building, mock interviews, and networking opportunities. Our partnerships with tech companies facilitate job placements. \n Speaker 1: What's the average salary of your graduates? \n Speaker 2: The average starting salary of our graduates is around $70,000, though it can vary based on location and individual company offers.",
 		"date_created": "2023-08-27T15:45:00Z",
 		"enrollment_coach": "Riley Johnson",
