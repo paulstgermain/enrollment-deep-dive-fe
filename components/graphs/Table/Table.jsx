@@ -4,21 +4,28 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
 
 const columns = [
 	{ field: "id", headerName: "ID", type: "number", width: 30 },
 	{ field: "date_created", headerName: "Date Created", width: 150 },
-	{
-		field: "enrollment_coach",
-		headerName: "Enrollment Coach",
-		width: 150,
-	},
-	{ field: "transcript", headerName: "Transcript", width: 300 },
-	{
-		field: "fireflies_summary",
-		headerName: "Fireflies Summary",
-		width: 300,
-	},
+    {
+        field: "enrollment_coach",
+        headerName: "Enrollment Coach",
+        width: 150,
+    },
+    {
+        field: 'fireflies_keywords',
+        headerName: 'Fireflies Keywords',
+        width: 525,
+        renderCell: (params) => (
+            <Box display="flex" flexWrap="wrap" gap={1}>
+                {params.value.map((tag) => (
+                    <Chip key={tag} label={tag} size="small" />
+                ))}
+            </Box>
+        )
+    },
 	{
 		field: "time_availability",
 		headerName: "Availability",
@@ -45,7 +52,7 @@ const columns = [
     {
         field: 'view_details',
         headerName: "View Details",
-        width: 50,
+        width: 160,
         renderCell: (params) => (
             <Button variant="contained" color="primary" onClick={() => params.api/getRowEl(params.id)}>View Details</Button>
         )
