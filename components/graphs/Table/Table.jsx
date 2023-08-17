@@ -28,7 +28,7 @@ export default function DataTable() {
             field: "date_created",
             headerName: "Date Created",
             width: 150,
-            valueGetter: (params) => {return selectedRow.date_created.slice(0, 10)}
+            valueGetter: (params) => {return params.row.date_created.slice(0, 10)}
         },
         {
             field: "enrollment_coach", headerName: "Enrollment Coach", width: 150,
