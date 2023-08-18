@@ -6,23 +6,27 @@ export const DataContext = createContext();
 const Provider = DataContext.Provider;
 
 export const DataProvider = ({ children }) => {
-	const initialData= {
+	const initialState= {
 		tabNum: 0
 	}
-	const [data, setData] = useState(initialData);
+	const [state, setState] = useState(initialState);
 
 	useEffect(() => {
 		axios.get("http://localhost:3000/fakedata.json")
 			.then((res) => {
-				setData({...data, data: res.data});
+				setState({...state, data: res.data});
 			})
 			.catch((err) => {
 				console.log(err);
 			});
 	}, []);
+	
+	const updateState = (newState) => {
+		setState(newState);
+	}
 
 	return (
-		<DataContext.Provider value={data}>
+		<DataContext.Provider value={{ state, updateState }}>
 			{children}
 		</DataContext.Provider>
 	);

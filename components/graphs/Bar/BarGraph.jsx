@@ -8,7 +8,7 @@ function getY(data) {
 	let commitmentReadiness = 0;
 	let whyJoin = 0;
 
-	data.data && data.data.map((row) => {
+	data && data.map((row) => {
 		if (row.ec_checklist.time_availability === true) {
 			timeAvailability++;
         }
@@ -26,8 +26,8 @@ function getY(data) {
 }
 
 export default function BarGraph() {
-	let data = useData();
-    let dataY = getY(data);
+	let { state } = useData();
+    let dataY = getY(state.data);
 	var graphData = [
 		{
 			x: ["Availability", "Commitment", "Why"],

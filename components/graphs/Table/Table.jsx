@@ -9,7 +9,7 @@ import Tooltip from '@mui/material/Tooltip'
 import HelpIcon from '@mui/icons-material/Help';
 
 export default function DataTable() {
-	const data = useData();
+	const { state } = useData();
     const [open, setOpen] = useState(false);
     const [selectedRow, setSelectedRow] = useState(null);
 
@@ -86,10 +86,10 @@ export default function DataTable() {
 				margin: "50px",
 			}}
 		>
-			{data.data && (
+			{state.data && (
 				<div style={{ height: 631, width: "90%" }}>
 					<DataGrid
-						rows={data.data}
+						rows={state.data}
 						columns={columns}
 						initialState={{
 							pagination: {
