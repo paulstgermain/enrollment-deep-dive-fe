@@ -101,7 +101,7 @@ export default function DataTable() {
                 </CardContent>
             </Card>
 			{state.data && (
-				<div style={{ height: 'auto', width: "90%" }}>
+				<div style={{ height: 'auto', width: "auto" }}>
 					<DataGrid
 						rows={state.data}
 						columns={columns}

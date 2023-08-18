@@ -52,14 +52,17 @@ export default function Navbar() {
                                 <Tabs
                                     value={state.tabNum}
                                     onChange={handleTab}
-                                    textColor='primary'
-                                    indicatorColor='secondary'
+                                    textColor='inherit'
+                                    TabIndicatorProps={{
+                                        title: "indicator",
+                                        sx: { backgroundColor: '#00808c', height: 3 }
+                                      }}
                                 >
-                                    <Tab value={0} label="Data Grid" />
-                                    <Tab value={1} label="Bar Graph" />
-                                    <Tab value={2} label="Line Graph" />
-                                    <Tab value={3} label="Pie Graph" />
-                                    <Tab value={4} label="Scatter Graph" />
+                                    <Tab value={0} label="Data Grid" sx={{color: 'white'}} />
+                                    <Tab value={1} label="Bar Graph" sx={{color: 'white'}} />
+                                    <Tab value={2} label="Line Graph" sx={{color: 'white'}} />
+                                    <Tab value={3} label="Pie Graph" sx={{color: 'white'}} />
+                                    <Tab value={4} label="Scatter Graph" sx={{color: 'white'}} />
                                 </Tabs>
                             </Box>
                         </div>
