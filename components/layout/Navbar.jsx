@@ -11,7 +11,8 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
-import ApiIcon from '@mui/icons-material/Api';
+import ApiIcon from '@mui/icons-material/Api'
+import Image from 'next/image'
 
 const pages = ['Dashboard', 'Graphs']
 
@@ -39,7 +40,13 @@ export default function Navbar() {
             <AppBar position="static" style={{ backgroundColor: '#FF4B00' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <ApiIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                        <Image 
+                            src='/images/BIT_CircledIcon_White.png' 
+                            alt='BloomTech logo'
+                            width='25'
+                            height='25'
+                            style={{marginRight: '5px'}}
+                        />
                         <Typography
                             variant="h6"
                             noWrap
