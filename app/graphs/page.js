@@ -9,12 +9,13 @@ import LineGraph from "@/components/graphs/Line/LineGraph"
 import PieGraph from "@/components/graphs/Pie/PieGraph"
 import ScatterGraph from "@/components/graphs/Scatter/ScatterGraph"
 import DataGrid from "@/components/graphs/Table/Table"
+import { useData } from "@/context/dataContext"
 
 export default function Graphs() {
-    const [tabNum, setTabNum] = useState(0)
+    const { state, updateState } = useData();
 
     const handleTab = (e, newTabNum) => {
-        setTabNum(newTabNum)
+        updateState({...state, tabNum: newTabNum})
     }
 
     return (
@@ -22,7 +23,7 @@ export default function Graphs() {
             <div style={{ marginLeft: '150px', marginTop: '15px', width: '625px' }}>
                 <Box>
                     <Tabs
-                        value={tabNum}
+                        value={state.tabNum}
                         onChange={handleTab}
                         textColor='primary'
                         indicatorColor='secondary'
@@ -36,11 +37,11 @@ export default function Graphs() {
                 </Box>
             </div>
             <div>
-                {tabNum === 0 && <DataGrid />}
-                {tabNum === 1 && <BarGraph />}
-                {tabNum === 2 && <LineGraph />}
-                {tabNum === 3 && <PieGraph />}
-                {tabNum === 4 && <ScatterGraph />}
+                {state.tabNum === 0 && <DataGrid />}
+                {state.tabNum === 1 && <BarGraph />}
+                {state.tabNum === 2 && <LineGraph />}
+                {state.tabNum === 3 && <PieGraph />}
+                {state.tabNum === 4 && <ScatterGraph />}
             </div>
         </>
     )
