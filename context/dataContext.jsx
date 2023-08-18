@@ -12,7 +12,7 @@ export const DataProvider = ({ children }) => {
 	const [state, setState] = useState(initialState);
 
 	useEffect(() => {
-		axios.get("http://localhost:3000/fakedata.json")
+		axios.get("/fakedata.json")
 			.then((res) => {
 				setState({...state, data: res.data});
 			})
