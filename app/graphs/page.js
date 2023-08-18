@@ -27,20 +27,20 @@ export default function Graphs() {
                         textColor='primary'
                         indicatorColor='secondary'
                     >
-                        <Tab value={0} label="Bar Graph" />
-                        <Tab value={1} label="Line Graph" />
-                        <Tab value={2} label="Pie Graph" />
-                        <Tab value={3} label="Scatter Graph" />
-                        <Tab value={4} label="Data Grid" />
+                        <Tab value={0} label="Data Grid" />
+                        <Tab value={1} label="Bar Graph" />
+                        <Tab value={2} label="Line Graph" />
+                        <Tab value={3} label="Pie Graph" />
+                        <Tab value={4} label="Scatter Graph" />
                     </Tabs>
                 </Box>
             </div>
             <div>
-                {tabNum === 0 && <BarGraph />}
-                {tabNum === 1 && <LineGraph />}
-                {tabNum === 2 && <PieGraph />}
-                {tabNum === 3 && <ScatterGraph />}
-                {tabNum === 4 && <DataGrid />}
+                {tabNum === 0 && <DataGrid />}
+                {tabNum === 1 && <BarGraph />}
+                {tabNum === 2 && <LineGraph />}
+                {tabNum === 3 && <PieGraph />}
+                {tabNum === 4 && <ScatterGraph />}
             </div>
         </>
     )
