@@ -78,7 +78,7 @@ export default function Navbar() {
                                 <Tabs
                                     value={state.tabNum}
                                     onChange={handleTab}
-                                    textColor='white'
+                                    textColor='primary'
                                     indicatorColor='secondary'
                                 >
                                     <Tab value={0} label="Data Grid" />

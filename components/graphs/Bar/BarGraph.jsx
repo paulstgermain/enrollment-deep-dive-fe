@@ -1,6 +1,7 @@
 "use client";
 
-import Plot from "react-plotly.js";
+import dynamic from "next/dynamic";
+const Plot = dynamic(() => { return import("react-plotly.js") }, { ssr: false })
 import { useData } from "@/context/dataContext";
 
 function getY(data) {

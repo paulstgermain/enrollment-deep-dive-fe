@@ -1,6 +1,7 @@
 "use client"
 
-import Plot from "react-plotly.js";
+import dynamic from "next/dynamic";
+const Plot = dynamic(() => { return import("react-plotly.js") }, { ssr: false })
 
 export default function LineGraph() {
     let trace1 = {
