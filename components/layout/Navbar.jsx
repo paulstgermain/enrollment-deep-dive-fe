@@ -13,11 +13,19 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import ApiIcon from '@mui/icons-material/Api'
 import Image from 'next/image'
+import Tab from "@mui/material/Tab"
+import Tabs from "@mui/material/Tabs"
+import { useData } from "@/context/dataContext"
 
 const pages = ['Dashboard', 'Graphs']
 
 export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState(null)
+    const { state, updateState } = useData();
+
+    const handleTab = (e, newTabNum) => {
+        updateState({...state, tabNum: newTabNum})
+    }
     // const [anchorElUser, setAnchorElUser] = useState(null)
 
     const handleOpenNavMenu = (event) => {
@@ -65,72 +73,22 @@ export default function Navbar() {
                             Enrollment Deep Dive
                         </Typography>
 
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
-                                color="inherit"
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    display: { xs: 'block', md: 'none' }
-                                }}
-                            >
-                                {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
-                                    </MenuItem>
-                                ))}
-                            </Menu>
-                        </Box>
-                        <ApiIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            href="/"
-                            sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                            }}
-                        >
-                            LOGO
-                        </Typography>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
-                            ))}
-                        </Box>
+                        <div style={{ marginTop: '5px' }}>
+                            <Box>
+                                <Tabs
+                                    value={state.tabNum}
+                                    onChange={handleTab}
+                                    textColor='white'
+                                    indicatorColor='secondary'
+                                >
+                                    <Tab value={0} label="Data Grid" />
+                                    <Tab value={1} label="Bar Graph" />
+                                    <Tab value={2} label="Line Graph" />
+                                    <Tab value={3} label="Pie Graph" />
+                                    <Tab value={4} label="Scatter Graph" />
+                                </Tabs>
+                            </Box>
+                        </div>
                     </Toolbar>
                 </Container>
             </AppBar>

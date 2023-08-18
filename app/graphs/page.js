@@ -20,22 +20,6 @@ export default function Graphs() {
 
     return (
         <>
-            <div style={{ marginLeft: '150px', marginTop: '15px', width: '625px' }}>
-                <Box>
-                    <Tabs
-                        value={state.tabNum}
-                        onChange={handleTab}
-                        textColor='primary'
-                        indicatorColor='secondary'
-                    >
-                        <Tab value={0} label="Data Grid" />
-                        <Tab value={1} label="Bar Graph" />
-                        <Tab value={2} label="Line Graph" />
-                        <Tab value={3} label="Pie Graph" />
-                        <Tab value={4} label="Scatter Graph" />
-                    </Tabs>
-                </Box>
-            </div>
             <div>
                 {state.tabNum === 0 && <DataGrid />}
                 {state.tabNum === 1 && <BarGraph />}

@@ -1,10 +1,10 @@
 "use client"
 import { useState } from 'react'
-import styles from './page.module.css'
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
+import BarGraph from "@/components/graphs/Bar/BarGraph"
+import LineGraph from "@/components/graphs/Line/LineGraph"
+import PieGraph from "@/components/graphs/Pie/PieGraph"
+import ScatterGraph from "@/components/graphs/Scatter/ScatterGraph"
+import DataGrid from "@/components/graphs/Table/Table"
 import { useData } from '@/context/dataContext'
 import Login from '@/components/login/Login'
 import { isAuthenticated } from '@/auth/basicAuth'
@@ -15,8 +15,7 @@ export default function Home() {
   );
   const [keyPhrase, setKeyPhrase] = useState("");
 
-  const data = useData()
-  data && console.log(data)
+  const { state } = useData()
   //check if authenticated
   //if not, redirect to /login
   return (
@@ -26,13 +25,13 @@ export default function Home() {
         - if user is NOT authenticated, show login
       */}
       { isAuthenticatedState ? (
-        <Container style={{ marginTop: '25px' }}>
-        <Box>
-          <Card>
-            <Typography variant="h2">Hello World ~</Typography>
-          </Card>
-        </Box>
-      </Container>
+        <div>
+          {state.tabNum === 0 && <DataGrid />}
+          {state.tabNum === 1 && <BarGraph />}
+          {state.tabNum === 2 && <LineGraph />}
+          {state.tabNum === 3 && <PieGraph />}
+          {state.tabNum === 4 && <ScatterGraph />}
+        </div>
       ) : (
         <Login
         setIsAuthenticatedState={setIsAuthenticatedState}
