@@ -1,7 +1,10 @@
 const keyPhrase = process.env.KEY_PHRASE;
 
 const isAuthenticated = () => {
-  const savedKeyPhrase = localStorage.getItem("keyPhrase");
+  let savedKeyPhrase;
+  if (typeof window !== 'undefined') {
+    savedKeyPhrase = localStorage.getItem("keyPhrase");
+  }
   return savedKeyPhrase === keyPhrase;
 };
 
