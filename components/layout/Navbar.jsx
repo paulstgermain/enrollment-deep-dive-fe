@@ -1,47 +1,21 @@
 "use client"
 
-import { useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
-import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import Menu from '@mui/material/Menu'
-import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
-import Button from '@mui/material/Button'
-import MenuItem from '@mui/material/MenuItem'
-import ApiIcon from '@mui/icons-material/Api'
 import Image from 'next/image'
 import Tab from "@mui/material/Tab"
 import Tabs from "@mui/material/Tabs"
 import { useData } from "@/context/dataContext"
 
-const pages = ['Dashboard', 'Graphs']
-
 export default function Navbar() {
-    const [anchorElNav, setAnchorElNav] = useState(null)
     const { state, updateState } = useData();
 
     const handleTab = (e, newTabNum) => {
         updateState({...state, tabNum: newTabNum})
     }
-    // const [anchorElUser, setAnchorElUser] = useState(null)
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget)
-    }
-    // const handleOpenUserMenu = (event) => {
-    //     setAnchorElUser(event.currentTarget)
-    // }
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null)
-    }
-
-    // const handleCloseUserMenu = () => {
-    //     setAnchorElUser(null)
-    // }
 
     return (
         <header>

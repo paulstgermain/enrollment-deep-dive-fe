@@ -3,7 +3,6 @@ import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 
 export const DataContext = createContext();
-const Provider = DataContext.Provider;
 
 export const DataProvider = ({ children }) => {
 	const initialState= {
