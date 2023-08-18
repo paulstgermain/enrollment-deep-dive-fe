@@ -86,10 +86,10 @@ export default function DataTable() {
 				margin: "50px",
 			}}
 		>
-			{data && (
+			{data.data && (
 				<div style={{ height: 631, width: "90%" }}>
 					<DataGrid
-						rows={data}
+						rows={data.data}
 						columns={columns}
 						initialState={{
 							pagination: {

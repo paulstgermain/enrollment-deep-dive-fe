@@ -6,12 +6,15 @@ export const DataContext = createContext();
 const Provider = DataContext.Provider;
 
 export const DataProvider = ({ children }) => {
-	const [data, setData] = useState(null);
+	const initialData= {
+		tabNum: 0
+	}
+	const [data, setData] = useState(initialData);
 
 	useEffect(() => {
 		axios.get("http://localhost:3000/fakedata.json")
 			.then((res) => {
-				setData(res.data);
+				setData({...data, data: res.data});
 			})
 			.catch((err) => {
 				console.log(err);

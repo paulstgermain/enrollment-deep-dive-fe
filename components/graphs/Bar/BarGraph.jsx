@@ -8,7 +8,7 @@ function getY(data) {
 	let commitmentReadiness = 0;
 	let whyJoin = 0;
 
-	data && data.map((row) => {
+	data.data && data.data.map((row) => {
 		if (row.ec_checklist.time_availability === true) {
 			timeAvailability++;
         }
