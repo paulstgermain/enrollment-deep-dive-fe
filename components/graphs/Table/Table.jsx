@@ -7,6 +7,9 @@ import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Tooltip from '@mui/material/Tooltip'
 import HelpIcon from '@mui/icons-material/Help';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent'
+import Typography from "@mui/material/Typography";
 
 export default function DataTable() {
 	const { state } = useData();
@@ -82,12 +85,23 @@ export default function DataTable() {
 		<div
 			style={{
 				display: "flex",
+                flexDirection: 'column',
 				justifyContent: "center",
 				margin: "50px",
 			}}
 		>
+            <Card sx={{ width: 275, height: 200, marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>
+                <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <Typography variant="h5" component="div">
+                    Enrollment Calls
+                    </Typography>
+                    <Typography sx={{ mb: 1.5, mt: 2.5, fontSize: '64px' }}>
+                    {state.data.length}
+                    </Typography>
+                </CardContent>
+            </Card>
 			{state.data && (
-				<div style={{ height: 631, width: "90%" }}>
+				<div style={{ height: 'auto', width: "90%" }}>
 					<DataGrid
 						rows={state.data}
 						columns={columns}
@@ -96,11 +110,10 @@ export default function DataTable() {
 								paginationModel:
 									{
 										page: 0,
-										pageSize: 10,
+										pageSize: 5,
 									},
 							},
 						}}
-						pageSizeOptions={[5, 10]}
 					/>
 				</div>
 			)}
