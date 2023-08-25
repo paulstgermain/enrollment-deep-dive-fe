@@ -10,6 +10,7 @@ import HelpIcon from '@mui/icons-material/Help';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent'
 import Typography from "@mui/material/Typography";
+import LandingCard from "@/components/layout/LandingCard";
 
 export default function DataTable() {
 	const { state } = useData();
@@ -90,16 +91,10 @@ export default function DataTable() {
 				margin: "50px",
 			}}
 		>
-            <Card sx={{ width: 275, height: 200, marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>
-                <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <Typography variant="h5" component="div">
-                    Enrollment Calls
-                    </Typography>
-                    <Typography sx={{ mb: 1.5, mt: 2.5, fontSize: '64px' }}>
-                    {state.data.length}
-                    </Typography>
-                </CardContent>
-            </Card>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+                <LandingCard header="Enrollment Calls" number={state.data.length} />
+                <LandingCard header="Enrollment Calls" number={state.data.length} />
+            </div>
 			{state.data && (
 				<div style={{ height: 'auto', width: "auto" }}>
 					<DataGrid
