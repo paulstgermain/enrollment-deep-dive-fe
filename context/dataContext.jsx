@@ -24,6 +24,7 @@ export const DataProvider = ({ children }) => {
 
 		for (let i = 0; i<runs; i++) {
 			result.push({
+				id: i,
 				ec_checklist: {
 					motivation: rawData.transcripts.checklist_precision[i].A,
 					time_commitment: rawData.transcripts.checklist_precision[i].B,
