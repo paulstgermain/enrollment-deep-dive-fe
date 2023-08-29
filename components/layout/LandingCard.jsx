@@ -7,11 +7,11 @@ export default function LandingCard({ header, number, blurb }) {
     return (
         <Card sx={{ width: 275, height: 200, marginBottom: '15px', marginRight: '15px', display: 'flex', justifyContent: 'center' }}>
                 <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <Typography variant="h5" component="div">
-                    { header }
-                    </Typography>
-                    <Typography sx={{ mb: 1.5, mt: 2.5, fontSize: '64px' }}>
+                    <Typography sx={{ mt: 2.5, fontSize: '64px' }}>
                     { number }
+                    </Typography>
+                    <Typography variant="h6">
+                    { header }
                     </Typography>
                 </CardContent>
             </Card>
