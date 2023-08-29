@@ -17,6 +17,33 @@ export const DataProvider = ({ children }) => {
 		return axios.get(endpoint);
 	}
 
+	function rawDataProcessor(rawData) {
+		// raw data = {transcripts, summaries}
+		let result = [];
+		const runs = Object.keys(rawData.transcripts.filename).length;
+
+		for (let i = 0; i<runs; i++) {
+			result.push({
+				ec_checklist: {
+					motivation: rawData.transcripts.checklist_precision[i].A,
+					time_commitment: rawData.transcripts.checklist_precision[i].B,
+					value_props: rawData.transcripts.checklist_precision[i].C,
+					competitors: rawData.transcripts.checklist_precision[i].D,
+					schedule_call: rawData.transcripts.checklist_precision[i].E,
+					demo: rawData.transcripts.checklist_precision[i].F,
+					complete_enrollment: rawData.transcripts.checklist_precision[i].G,
+					good_overview: rawData.transcripts.checklist_precision[i].H,
+					objections: rawData.transcripts.checklist_precision[i].I
+				},
+				transcript: rawData.transcripts.transcripts[i],
+				// Check with Royce about summaries matching 1:1 with transcripts data
+				filename: rawData.transcripts.filename[i]
+			})
+		}
+
+		return result;
+	}
+
 	useEffect(() => {
 		let endpoints = [
 			"/fakedata.json",
@@ -26,14 +53,16 @@ export const DataProvider = ({ children }) => {
 		axios.all(endpoints.map((endpoint) => endpointProcessor(endpoint))).then(
 			axios.spread((data, checklistPercent, rawData) => {
 				let result = { data, checklistPercent, rawData };
+				rawData = {
+					summaries: JSON.parse(result.rawData.data.summaries),
+					transcripts: JSON.parse(result.rawData.data.transcripts)
+				};
 				setState({ 
 					...state, 
 					data: result.data.data, 
 					checklistPercent: result.checklistPercent.data, 
-					rawData: {
-						summaries: JSON.parse(result.rawData.data.summaries),
-						transcripts: JSON.parse(result.rawData.data.transcripts)
-					},
+					rawData: rawData,
+					realData: rawDataProcessor(rawData),
 					totalCalls: Object.keys(JSON.parse(result.rawData.data.transcripts).filename).length
 				})
 			  })
