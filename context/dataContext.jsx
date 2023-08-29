@@ -10,14 +10,34 @@ export const DataProvider = ({ children }) => {
 	}
 	const [state, setState] = useState(initialState);
 
+	function endpointProcessor(endpoint) {
+		if (endpoint === "https://enrollmentdeepdive-62360fb06e3e.herokuapp.com/data-to-json") {
+			return axios.post(endpoint);
+		}
+		return axios.get(endpoint);
+	}
+
 	useEffect(() => {
-		axios.get("/fakedata.json")
-			.then((res) => {
-				setState({...state, data: res.data});
-			})
-			.catch((err) => {
-				console.log(err);
-			});
+		let endpoints = [
+			"/fakedata.json",
+			"https://enrollmentdeepdive-62360fb06e3e.herokuapp.com/checklist_precision_percent",
+			"https://enrollmentdeepdive-62360fb06e3e.herokuapp.com/data-to-json"
+		]
+		axios.all(endpoints.map((endpoint) => endpointProcessor(endpoint))).then(
+			axios.spread((data, checklistPercent, rawData) => {
+				let result = { data, checklistPercent, rawData };
+				setState({ 
+					...state, 
+					data: result.data.data, 
+					checklistPercent: result.checklistPercent.data, 
+					rawData: {
+						summaries: JSON.parse(result.rawData.data.summaries),
+						transcripts: JSON.parse(result.rawData.data.transcripts)
+					},
+					totalCalls: Object.keys(JSON.parse(result.rawData.data.transcripts).filename).length
+				})
+			  })
+		)
 	}, []);
 	
 	const updateState = (newState) => {

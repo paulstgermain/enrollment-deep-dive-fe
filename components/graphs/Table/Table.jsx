@@ -82,6 +82,8 @@ export default function DataTable() {
         }
     ];
 
+    console.log(state);
+
 	return (
 		<div
 			style={{
@@ -92,8 +94,7 @@ export default function DataTable() {
 			}}
 		>
             <div style={{ display: "flex", flexDirection: "row" }}>
-                <LandingCard header="Enrollment Calls" number={state.data.length} />
-                <LandingCard header="Enrollment Calls" number={state.data.length} />
+                <LandingCard header="Calls on Record" number={state.totalCalls} />
             </div>
 			{state.data && (
 				<div style={{ height: 'auto', width: "auto" }}>
