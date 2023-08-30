@@ -24,10 +24,12 @@ export default function LandingCard({ header, number, blurb }) {
     }
 
     return (
-        <Card sx={{ width: cardWidth(header).width, height: cardWidth(header).height, marginBottom: '15px', display: 'flex', justifyContent: 'center', color: colorCode(number, header) }}>
+        <Card sx={{ width: cardWidth(header).width, height: cardWidth(header).height, marginBottom: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: colorCode(number, header) }}>
             <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <Typography sx={{ fontSize: '48px' }}>
-                { number }
+                { header === "Calls on Record" ?
+                number :
+                `${number}%` }
                 </Typography>
                 <Typography variant="h7">
                 { header }
