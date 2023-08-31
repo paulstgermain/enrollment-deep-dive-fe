@@ -59,29 +59,6 @@ export const DataProvider = ({ children }) => {
 		return result;
 	}
 
-	function countTrueValues(obj) {
-		let count = 0;
-		
-		for (const key in obj) {
-		  if (typeof obj[key] === 'object' && obj[key] !== null) {
-			count += countTrueValues(obj[key]);
-		  } else if (obj[key] === true) {
-			count++;
-		  }
-		}
-		
-		return count;
-	  }
-
-	function getChecklistPercentTrue(data, totalCalls) {
-		let count = countTrueValues(data);
-		return {
-			countTrue: count,
-			totalCalls: totalCalls,
-			checklistPercentTrue: (count / totalCalls)
-		}
-	}
-
 	useEffect(() => {
 		let endpoints = [
 			"/fakedata.json",
@@ -104,7 +81,6 @@ export const DataProvider = ({ children }) => {
 					rawData: rawData,
 					realData: rawDataProcessor(rawData),
 					totalCalls: totalCalls,
-					checklistPercentTrue: getChecklistPercentTrue(rawData.transcripts.checklist_precision, totalCalls)
 				})
 			  })
 		)
