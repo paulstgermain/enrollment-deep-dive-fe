@@ -17,6 +17,20 @@ export const DataProvider = ({ children }) => {
 		return axios.get(endpoint);
 	}
 
+	function roundChecklistPercents(percents) {
+		return {
+			"A": Math.round((percents["A"] + Number.EPSILON) * 100) / 100,
+			"B": Math.round((percents["B"] + Number.EPSILON) * 100) / 100,
+			"C": Math.round((percents["C"] + Number.EPSILON) * 100) / 100,
+			"D": Math.round((percents["D"] + Number.EPSILON) * 100) / 100,
+			"E": Math.round((percents["E"] + Number.EPSILON) * 100) / 100,
+			"F": Math.round((percents["F"] + Number.EPSILON) * 100) / 100,
+			"G": Math.round((percents["G"] + Number.EPSILON) * 100) / 100,
+			"H": Math.round((percents["H"] + Number.EPSILON) * 100) / 100,
+			"I": Math.round((percents["I"] + Number.EPSILON) * 100) / 100,
+		}
+	}
+
 	function rawDataProcessor(rawData) {
 		// raw data = {transcripts, summaries}
 		let result = [];
@@ -82,10 +96,11 @@ export const DataProvider = ({ children }) => {
 					transcripts: JSON.parse(result.rawData.data.transcripts)
 				};
 				let totalCalls = Object.keys(JSON.parse(result.rawData.data.transcripts).filename).length;
+				
 				setState({ 
 					...state, 
 					data: result.data.data, 
-					checklistPercent: result.checklistPercent.data, 
+					checklistPercent: roundChecklistPercents(result.checklistPercent.data), 
 					rawData: rawData,
 					realData: rawDataProcessor(rawData),
 					totalCalls: totalCalls,
