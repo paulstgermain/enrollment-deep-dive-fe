@@ -6,7 +6,7 @@ const Plot = dynamic(() => { return import("react-plotly.js") }, { ssr: false })
 export default function PieGraph() {
 
     let data = [{
-        values: [19, 26, 55],
+        values: [56.9, (100 - 56.9)],
         labels: ['Residential', 'Non-Residential', 'Utility'],
         type: 'pie'
       }];
