@@ -59,6 +59,60 @@ export const DataProvider = ({ children }) => {
 		return result;
 	}
 
+	function checklistBarGraph(data) {
+		let motivation = 0;
+		let time_commitment = 0;
+		let value_props = 0;
+		let competitors = 0;
+		let schedule_call = 0;
+		let demo = 0;
+		let complete_enrollment = 0;
+		let good_overview = 0;
+		let objections = 0;
+
+		data && data.map((row) => {
+			if (row.ec_checklist.motivation === true) {
+				motivation++;
+			}
+			if (row.ec_checklist.time_commitment === true) {
+				time_commitment++
+			}
+			if (row.ec_checklist.value_props === true) {
+				value_props++
+			}
+			if (row.ec_checklist.competitors === true) {
+				competitors++
+			}
+			if (row.ec_checklist.schedule_call === true) {
+				schedule_call++
+			}
+			if (row.ec_checklist.demo === true) {
+				demo++
+			}
+			if (row.ec_checklist.complete_enrollment === true) {
+				complete_enrollment++
+			}
+			if (row.ec_checklist.good_overview === true) {
+				good_overview++
+			}
+			if (row.ec_checklist.objections === true) {
+				objections++
+			}
+		})
+
+		return {
+			motivation: motivation,
+			time_commitment: time_commitment,
+			value_props: value_props,
+			competitors: competitors,
+			schedule_call: schedule_call,
+			demo: demo,
+			complete_enrollment: complete_enrollment,
+			good_overview: good_overview,
+			objections: objections
+		}
+	}
+
 	useEffect(() => {
 		let endpoints = [
 			"/fakedata.json",
@@ -73,13 +127,15 @@ export const DataProvider = ({ children }) => {
 					transcripts: JSON.parse(result.rawData.data.transcripts)
 				};
 				let totalCalls = Object.keys(JSON.parse(result.rawData.data.transcripts).filename).length;
+				let realData = rawDataProcessor(rawData)
 				
 				setState({ 
 					...state, 
 					data: result.data.data, 
 					checklistPercent: roundChecklistPercents(result.checklistPercent.data), 
 					rawData: rawData,
-					realData: rawDataProcessor(rawData),
+					realData: realData,
+					checklistBarGraphData: checklistBarGraph(realData),
 					totalCalls: totalCalls,
 				})
 			  })

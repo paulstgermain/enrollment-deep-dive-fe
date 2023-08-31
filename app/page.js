@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react'
 import BarGraph from "@/components/graphs/Bar/BarGraph"
+import ChecklistAnalysis from '@/components/checklistAnalysis/checklistAnalysis'
 import LineGraph from "@/components/graphs/Line/LineGraph"
 import PieGraph from "@/components/graphs/Pie/PieGraph"
 import ScatterGraph from "@/components/graphs/Scatter/ScatterGraph"
@@ -24,7 +25,7 @@ export default function Home() {
         <div>
           {state.tabNum === 0 && <Landing />}
           {state.tabNum === 1 && <DataGrid />}
-          {state.tabNum === 2 && <BarGraph />}
+          {state.tabNum === 2 && <ChecklistAnalysis />}
           {state.tabNum === 3 && <LineGraph />}
           {state.tabNum === 4 && <PieGraph />}
           {state.tabNum === 5 && <ScatterGraph />}

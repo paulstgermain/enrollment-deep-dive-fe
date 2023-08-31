@@ -60,7 +60,7 @@ export default function Navbar() {
                                 >
                                     <Tab value={0} label="Home" sx={{color: 'white'}} />
                                     <Tab value={1} label="Data" sx={{color: 'white'}} />
-                                    <Tab value={2} label="Bar Graph" sx={{color: 'white'}} />
+                                    <Tab value={2} label="Checklist Analysis" sx={{color: 'white'}} />
                                     <Tab value={3} label="Line Graph" sx={{color: 'white'}} />
                                     <Tab value={4} label="Pie Graph" sx={{color: 'white'}} />
                                     <Tab value={5} label="Scatter Graph" sx={{color: 'white'}} />

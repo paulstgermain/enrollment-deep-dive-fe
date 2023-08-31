@@ -3,39 +3,32 @@
 import dynamic from "next/dynamic";
 const Plot = dynamic(() => { return import("react-plotly.js") }, { ssr: false })
 import { useData } from "@/context/dataContext";
-
-function getY(data) {
-	let timeAvailability = 0;
-	let commitmentReadiness = 0;
-	let whyJoin = 0;
-
-	data && data.map((row) => {
-		if (row.ec_checklist.time_availability === true) {
-			timeAvailability++;
-        }
-		if (row.ec_checklist.commitment_readiness === true) {
-			commitmentReadiness++;
-        }
-		if (row.ec_checklist.why_join === true) {
-            whyJoin++;
-        }
-	});
-
-	let result = [timeAvailability, commitmentReadiness, whyJoin];
-
-	return result;
-}
+import Graph from "../graphs/Graph";
 
 export default function ChecklistAnalysis() {
 	let { state } = useData();
-    let dataY = getY(state.data);
-	var graphData = [
-		{
-			x: ["Availability", "Commitment", "Why"],
-			y: dataY,
-			type: "bar",
-		},
-	];
+	let graphData = {
+		data: [{
+			x: ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+			y: [
+				state.checklistBarGraphData.motivation,
+				state.checklistBarGraphData.time_commitment,
+				state.checklistBarGraphData.value_props,
+				state.checklistBarGraphData.competitors,
+				state.checklistBarGraphData.schedule_call,
+				state.checklistBarGraphData.demo,
+				state.checklistBarGraphData.complete_enrollment,
+				state.checklistBarGraphData.good_overview,
+				state.checklistBarGraphData.objections,
+			],
+			type: "bar"
+		}],
+		layout: {
+			width: 640,
+			height: 480,
+			title: "EC Checklist Count: True"
+		}
+	}
 
 	return (
 		<div
@@ -45,14 +38,7 @@ export default function ChecklistAnalysis() {
 				margin: "50px",
 			}}
 		>
-			<Plot
-				data={graphData}
-				layout={{
-					width: 640,
-					height: 480,
-					title: "Bar Graph",
-				}}
-			/>
+			<Graph graphData={graphData} />
 		</div>
 	);
 }
