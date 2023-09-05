@@ -26,9 +26,9 @@ export default function Home() {
           {state.tabNum === 0 && <Landing />}
           {state.tabNum === 1 && <DataGrid />}
           {state.tabNum === 2 && <ChecklistAnalysis />}
-          {state.tabNum === 3 && <LineGraph />}
+          {/* {state.tabNum === 3 && <LineGraph />}
           {state.tabNum === 4 && <PieGraph />}
-          {state.tabNum === 5 && <ScatterGraph />}
+          {state.tabNum === 5 && <ScatterGraph />} */}
         </div>
       ) : (
         <Login
