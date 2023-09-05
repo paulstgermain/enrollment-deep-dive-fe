@@ -1,5 +1,5 @@
 "use client"
-import { login } from '../../auth/basicAuth';
+import { login } from '../../../auth/basicAuth';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Image from 'next/image'

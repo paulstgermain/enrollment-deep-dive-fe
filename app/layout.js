@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import CssBaseline from '@mui/material/CssBaseline'
-import Navbar from '../components/layout/Navbar'
+import Navbar from './components/layout/Navbar'
 import { DataProvider } from '@/context/dataContext'
 
 const inter = Inter({ subsets: ['latin'] })

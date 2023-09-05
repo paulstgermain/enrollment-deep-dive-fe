@@ -1,14 +1,14 @@
 "use client"
 import { useState } from 'react'
-import BarGraph from "@/components/graphs/Bar/BarGraph"
-import ChecklistAnalysis from '@/components/checklistAnalysis/checklistAnalysis'
-import LineGraph from "@/components/graphs/Line/LineGraph"
-import PieGraph from "@/components/graphs/Pie/PieGraph"
-import ScatterGraph from "@/components/graphs/Scatter/ScatterGraph"
-import DataGrid from "@/components/graphs/Table/Table"
-import Landing from '@/components/landing/Landing'
+import BarGraph from "@/app/components/graphs/Bar/BarGraph"
+import ChecklistAnalysis from '@/app/components/checklistAnalysis/checklistAnalysis'
+import LineGraph from "@/app/components/graphs/Line/LineGraph"
+import PieGraph from "@/app/components/graphs/Pie/PieGraph"
+import ScatterGraph from "@/app/components/graphs/Scatter/ScatterGraph"
+import DataGrid from "@/app/components/graphs/Table/Table"
+import Landing from '@/app/components/landing/Landing'
 import { useData } from '@/context/dataContext'
-import Login from '@/components/login/Login'
+import Login from '@/app/components/login/Login'
 import { isAuthenticated } from '@/auth/basicAuth'
 
 export default function Home() {

@@ -41,10 +41,11 @@ export default function ChecklistAnalysis() {
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "center",
+				flexWrap: "wrap",
 				margin: "50px",
 			}}
 		>
-			<div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
+			<div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
 				<Card sx={{ width: 500, height: 450, marginBottom: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 					<CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
 						<Typography variant="h6" style={{ fontWeight: 'bold' }}>
@@ -132,8 +133,8 @@ export default function ChecklistAnalysis() {
 				/>
 				<Graph graphData={{
 					data: [{
-						values: [state.checklistPercent["A"], (100 - state.checklistPercent["A"])],
-					labels: ['True', 'False'],
+						values: [state.checklistPercent["D"], (100 - state.checklistPercent["D"])],
+					labels: ['False', 'True'],
 					type: 'pie'
 					}],
 					layout: {
@@ -152,14 +153,14 @@ export default function ChecklistAnalysis() {
 					layout: {
 						width: 300,
 						height: 300,
-						title: "A. Schedule Call"
+						title: "E. Schedule Call"
 					}
 				}}
 				/>
 				<Graph graphData={{
 					data: [{
 						values: [state.checklistPercent["F"], (100 - state.checklistPercent["F"])],
-					labels: ['True', 'False'],
+					labels: ['False', 'True'],
 					type: 'pie'
 					}],
 					layout: {
