@@ -1,9 +1,11 @@
 "use client";
 
 import dynamic from "next/dynamic";
-const Plot = dynamic(() => { return import("react-plotly.js") }, { ssr: false })
 import { useData } from "@/context/dataContext";
 import Graph from "../graphs/Graph";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from "@mui/material/Typography";
 
 export default function ChecklistAnalysis() {
 	let { state } = useData();
@@ -42,7 +44,43 @@ export default function ChecklistAnalysis() {
 				margin: "50px",
 			}}
 		>
-			<Graph graphData={graphData} />
+			<div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
+				<Card sx={{ width: 500, height: 450, marginBottom: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+					<CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+						<Typography variant="h6" style={{ fontWeight: 'bold' }}>
+							LEGEND:
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>A:</span> Are we asking learners what motivated them to look into BloomTech?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>B:</span> Are we informing learners of the weekly time commitment and the length of the program?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>C:</span> Are they reviewing the value props: job or money back guarantee, flexibility, beginner friendly, try before you buy (Risk Free Trial)?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>D:</span> Are we asking learners if they are looking into competitors?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>E:</span> Are they scheduling another call with the learner?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>F:</span> Are we offering to demo the product?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>G:</span> Are we tasking the learner to complete enrollment and engage with the product?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>H:</span> Do we provide a good overview of the program, tuition options, and expectations?
+						</Typography>
+						<Typography sx={{ fontSize: '16px', marginBottom: '5px' }}>
+							<span style={{ color: 'red', fontWeight: 'bold' }}>I:</span> Are the coaches attempting to overcome objections?
+						</Typography>
+					</CardContent>
+				</Card>
+				<Graph graphData={graphData} />
+			</div>
 			<div
 				style={{
 					width: "100%",
