@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react'
 import BarGraph from "@/app/components/graphs/Bar/BarGraph"
-import ChecklistAnalysis from '@/app/components/checklistAnalysis/checklistAnalysis'
+import ChecklistAnalysis from '@/app/components/checklistAnalysis/ChecklistAnalysis'
 import LineGraph from "@/app/components/graphs/Line/LineGraph"
 import PieGraph from "@/app/components/graphs/Pie/PieGraph"
 import ScatterGraph from "@/app/components/graphs/Scatter/ScatterGraph"
